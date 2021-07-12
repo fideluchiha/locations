@@ -4,24 +4,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+
+
+correr la imagen de docker docker-compose up -d que se encuentra en este directorio
+
+si la base no se restablecio la tabla se crea con el siguiente scritp
+
+CREATE TABLE public.location (
+	"location" bigserial NOT NULL,
+	"name" varchar(120) NOT NULL,
+	area_m2 numeric NOT NULL,
+	setParentLocation varchar NULL,
+	created_at timestamp(0) NULL,
+	updated_at timestamp(0) NULL,
+	CONSTRAINT tbl_locations_pkey PRIMARY KEY (location)
+	
+);
+
+Desplegar el war locationRestApi en un apache tomcat 
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
